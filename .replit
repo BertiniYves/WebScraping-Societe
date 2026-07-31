@@ -1,0 +1,21 @@
+entrypoint = "main.py"
+# Yves : pour fermer des Chromes Zombie qiu bloquent demanrrag
+run = "bash clean.sh && python3 main.py"
+modules = ["nodejs-20", "web", "python-3.11"]
+
+[nix]
+channel = "stable-25_05"
+packages = ["geckodriver", "glibcLocales"]
+
+[unitTest]
+language = "python3"
+
+[gitHubImport]
+requiredFiles = [".replit", "replit.nix"]
+
+[deployment]
+run = ["python3", "main.py"]
+deploymentTarget = "cloudrun"
+
+[agent]
+expertMode = true

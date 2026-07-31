@@ -1,0 +1,4 @@
+undetected-chromedriver
+fake-useragent
+selenium
+pandas
